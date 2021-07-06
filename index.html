@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" style="height:100%">
 	<head>
+		<!-- TODO: change base after deployment  -->
+		<base href="http://localhost/MedTechHeart/"/>
+
+
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107203086-1"></script>
 		<script>
 		  window.dataLayer = window.dataLayer || [];
@@ -31,6 +35,16 @@
 		<script src="js/zinc_3js_renderer.js"></script>
 		<script src="js/show_hide_answer.js" ></script>
 		<script src="js/Add3DLabel.js" ></script>
+
+		<script src="js/kiwrious-heartrate2/libunicorn.out.js"></script>
+		<script src="js/kiwrious-heartrate2/libelf-integers.js"></script>
+		<script src="js/kiwrious-heartrate2/unicorn-wrapper.js"></script>
+		<script src="js/kiwrious-heartrate2/unicorn-constants.js"></script>
+		<script src="js/kiwrious-heartrate2/heartrate.js"></script>
+				
+		<script defer src="dist/bundle.js"></script>
+
+
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/dojo/1.11.2/dojo/dojo.js" data-dojo-config="async: 1, parseOnLoad: true" ></script>
 		<!-- <script src="../../dojo-release-1.11.2/dojo/dojo.js" data-dojo-config="async: 1, parseOnLoad: true" ></script>-->
 		<script>
@@ -146,6 +160,11 @@
 			</div>
 			<div class="rightChartTitle" style = "top:10%;width:75%;float:right;padding:10px;clear:right">
 				<b>Heart Rate</b>
+			</div>
+			<div class="kiwrious-container" style="text-align: center;">
+				<button id="btn-kiwrious-connect">Connect Kiwrious</button>
+				<button id="btn-kiwrious-disconnect">Disconnect Kiwrious</button>
+				<div id="kiwrious-value"></div>
 			</div>
 			<div id="rightRate" style = "top:10%;width:75%;clear:right;float:right;padding:10px">
 				<input id="speed_slider" type="range" min="0" max="5000" value ="1000" step="1" oninput="updateSlider(this.value)" style="width:80%;"/>
@@ -1678,7 +1697,7 @@
 			zincRenderer.setPlayRate(newValue);
 		}
 
+		
 	</script>
-
 	</body>
 </html>

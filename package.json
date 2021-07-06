@@ -1,0 +1,30 @@
+{
+  "name": "medtechheart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ABI-Web-Apps/MedTechHeart.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ABI-Web-Apps/MedTechHeart/issues"
+  },
+  "homepage": "https://github.com/ABI-Web-Apps/MedTechHeart#readme",
+  "dependencies": {
+    "jsfft": "0.0.4"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.3.1",
+    "ts-loader": "^9.1.2",
+    "typescript": "^4.2.4",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0"
+  }
+}
