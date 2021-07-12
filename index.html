@@ -147,32 +147,38 @@
 			</div>
 			<div id="rightECG" class="rightChart" style="width:100%;float:right;">
 			</div>
-			<div id="ECGDescription" class="rightChartDescription" style="width:75%;clear:right;float:right;padding:10px;color:rgb(175, 175, 175)">
+			<div id="ECGDescription" class="rightChartDescription" style="width:75%;clear:right;float:right;padding:10px;color:rgb(175, 175, 175);">
 				electrical waves make the heart muscle contract
 			</div>
-			<div class="rightChartTitle" style="top:6%;width:75%;float:right;padding:10px;">
+			<div class="rightChartTitle" style="top:3%;width:75%;float:right;padding:10px;">
 				<b>Pressure (mmHg)</b>
 			</div>
-			<div id="rightLVP" class="rightChart"  style="top:6%;width:100%;float:right;">
+			<div id="rightLVP" class="rightChart"  style="top:3%;width:100%;float:right;">
 			</div>
-			<div id="LVPDescription" class="rightChartDescription" style="top:6%;clear:right;width:75%;float:right;padding:10px;color:rgb(175, 175, 175)">
+			<div id="LVPDescription" class="rightChartDescription" style="top:3%;clear:right;width:75%;float:right;padding:10px;color:rgb(175, 175, 175);">
 				muscle contraction generates pump pressure
 			</div>
-			<div class="rightChartTitle" style = "top:10%;width:75%;float:right;padding:10px;clear:right">
+			<div class="rightChartTitle" style = "top:3%;width:75%;float:right;padding:10px;clear:right;">
 				<b>Heart Rate</b>
 			</div>
-			<div class="kiwrious-container" style="text-align: center;">
-				<button id="btn-kiwrious-connect">Connect Kiwrious</button>
-				<button id="btn-kiwrious-disconnect">Disconnect Kiwrious</button>
-				<div id="kiwrious-value"></div>
+
+			<div id="rightRate" style = "top:3%;width:75%;clear:right;float:right;padding:10px">
+				<input id="speed_slider" type="range" min="0" max="6000" value ="3000" step="1" oninput="updateSlider(this.value)" style="width:80%;"/>
 			</div>
-			<div id="rightRate" style = "top:10%;width:75%;clear:right;float:right;padding:10px">
-				<input id="speed_slider" type="range" min="0" max="5000" value ="1000" step="1" oninput="updateSlider(this.value)" style="width:80%;"/>
-			</div>
-			<div class="rightChartDescription" style="top:10%;width:75%;clear:right;float:right;padding:10px;color:rgb(175, 175, 175)">
+			<div class="rightChartDescription" style="top:3%;width:75%;clear:right;float:right;padding:10px;color:rgb(175, 175, 175);">
 				beats per minute
 			</div>
-			<div class="rightChartDescription" style="top:14%;width:75%;clear:right;float:right;padding:10px;color:rgb(175, 175, 175)">
+
+			<div class="kiwrious-container" style="top:3%;width:75%;clear:right;float:right;padding:10px;position: relative;text-align: center;">
+				<div class="grid-container">
+					<a class="grid-child" href="https://kiwrious.com/" target="_blank"><img src="images/Kiwrious_logo_white_wide.svg" alt="kiwrious_logo"></a>
+					<button class="grid-child" id="btn-kiwrious-connect">Connect Kiwrious</button>
+					<button class="grid-child" id="btn-kiwrious-disconnect">Disconnect Kiwrious</button>
+				</div>
+				<div class="rightChartDescription" id="kiwrious-value"></div>
+			</div>
+
+			<div class="rightChartDescription" style="top:3%;width:75%;clear:right;float:right;padding:10px;position: relative;color:rgb(175, 175, 175);">
 				<img src="images/heart_v7/medtechcore_abi_logo.png" alt="medtech_logo" style="width:100%;">
 		  </div>
 		</div>
